@@ -12,28 +12,48 @@ public class Jogos
     {
         get {return id;}
 
-        set
-        {
-           if (value == 0)
-            {
-                 throw new ArgumentException("O id não foi informado.");
-            }
-        }
+        set{id = value;}
     }
 
     public string Nome
     {
         get {return nome;}
 
-        set
-        {
-            if (string.IsNullOrWhiteSpace(value))
-            {
-                 throw new ArgumentException("O nome não pode ser nulo ou vazio.");
-            }
-            
-
-        }
+        set{nome = value;}
 
     }
+
+    public string Plataforma
+    {
+        get {return plataforma;}
+
+        set{plataforma = value;}
+
+    }
+
+    public string Genero
+    {
+        get {return genero;}
+
+        set{genero = value;}
+
+    }
+
+    public Jogos (string nome, int id, string plataforma, string genero)
+    {
+        Nome = nome;
+        Id = id;
+        Plataforma = plataforma;
+        Genero = genero;
+       
+    }
+
+
+
+    public override string ToString()
+    {
+        return $"Jogo: {Nome} | Id: {id} | Plataforma: {plataforma} | Genero: {genero}";
+    }
+
 }
+
