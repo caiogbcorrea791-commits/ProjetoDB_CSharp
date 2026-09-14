@@ -1,0 +1,15 @@
+C:\Users\vinicios61522996\Documents\GitHub\ProjetoDB_CSharp\bin\Debug\net10.0\ProjetoDB_CSharp.exe
+C:\Users\vinicios61522996\Documents\GitHub\ProjetoDB_CSharp\bin\Debug\net10.0\ProjetoDB_CSharp.deps.json
+C:\Users\vinicios61522996\Documents\GitHub\ProjetoDB_CSharp\bin\Debug\net10.0\ProjetoDB_CSharp.runtimeconfig.json
+C:\Users\vinicios61522996\Documents\GitHub\ProjetoDB_CSharp\bin\Debug\net10.0\ProjetoDB_CSharp.dll
+C:\Users\vinicios61522996\Documents\GitHub\ProjetoDB_CSharp\bin\Debug\net10.0\ProjetoDB_CSharp.pdb
+C:\Users\vinicios61522996\Documents\GitHub\ProjetoDB_CSharp\obj\Debug\net10.0\ProjetoDB_CSharp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\vinicios61522996\Documents\GitHub\ProjetoDB_CSharp\obj\Debug\net10.0\ProjetoDB_CSharp.AssemblyInfoInputs.cache
+C:\Users\vinicios61522996\Documents\GitHub\ProjetoDB_CSharp\obj\Debug\net10.0\ProjetoDB_CSharp.AssemblyInfo.cs
+C:\Users\vinicios61522996\Documents\GitHub\ProjetoDB_CSharp\obj\Debug\net10.0\ProjetoDB_CSharp.csproj.CoreCompileInputs.cache
+C:\Users\vinicios61522996\Documents\GitHub\ProjetoDB_CSharp\obj\Debug\net10.0\ProjetoDB_CSharp.sourcelink.json
+C:\Users\vinicios61522996\Documents\GitHub\ProjetoDB_CSharp\obj\Debug\net10.0\ProjetoDB_CSharp.dll
+C:\Users\vinicios61522996\Documents\GitHub\ProjetoDB_CSharp\obj\Debug\net10.0\refint\ProjetoDB_CSharp.dll
+C:\Users\vinicios61522996\Documents\GitHub\ProjetoDB_CSharp\obj\Debug\net10.0\ProjetoDB_CSharp.pdb
+C:\Users\vinicios61522996\Documents\GitHub\ProjetoDB_CSharp\obj\Debug\net10.0\ProjetoDB_CSharp.genruntimeconfig.cache
+C:\Users\vinicios61522996\Documents\GitHub\ProjetoDB_CSharp\obj\Debug\net10.0\ref\ProjetoDB_CSharp.dll
