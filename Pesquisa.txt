@@ -1,1 +1,20 @@
+1 - Como C# realiza uma conexão com um banco de dados?
+O C# realiza a conexão com o banco de dados apartir do ADO.NET que é um conjunto de classes do sistema .NET para a comunicação com o 
+banco de dados
+
+2 - Qual biblioteca/driver é utilizado pelo banco escolhido?
+A biblioteca/driver utilizada no código é Mysql.Data
+
+
+3 - Como essa biblioteca é adicionada ao projeto?
+
+
+4 - O que é uma string de conexão?
+É um texto que passa as informações necessarias para permitet a conectaxão com o banco de dados
+
+5 - Quais informações normalmente aparecem em uma string de conexão?
+Aparece o nome do host onde que o banco de dados está rodando, o nome do banco de dados, o nome do login do usuário, a senha do usuário
+
+
+
 
