@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\vinicios61522996\\Documents\\GitHub\\ProjetoDB_CSharp\\ProjetoDB_CSharp.csproj": {}
+    "C:\\Users\\caio61412366\\Documents\\GitHub\\ProjetoDB_CSharp\\ProjetoDB_CSharp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\vinicios61522996\\Documents\\GitHub\\ProjetoDB_CSharp\\ProjetoDB_CSharp.csproj": {
+    "C:\\Users\\caio61412366\\Documents\\GitHub\\ProjetoDB_CSharp\\ProjetoDB_CSharp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\vinicios61522996\\Documents\\GitHub\\ProjetoDB_CSharp\\ProjetoDB_CSharp.csproj",
+        "projectUniqueName": "C:\\Users\\caio61412366\\Documents\\GitHub\\ProjetoDB_CSharp\\ProjetoDB_CSharp.csproj",
         "projectName": "ProjetoDB_CSharp",
-        "projectPath": "C:\\Users\\vinicios61522996\\Documents\\GitHub\\ProjetoDB_CSharp\\ProjetoDB_CSharp.csproj",
-        "packagesPath": "C:\\Users\\vinicios61522996\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\vinicios61522996\\Documents\\GitHub\\ProjetoDB_CSharp\\obj\\",
+        "projectPath": "C:\\Users\\caio61412366\\Documents\\GitHub\\ProjetoDB_CSharp\\ProjetoDB_CSharp.csproj",
+        "packagesPath": "C:\\Users\\caio61412366\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\caio61412366\\Documents\\GitHub\\ProjetoDB_CSharp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\vinicios61522996\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\caio61412366\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net10.0"
@@ -43,6 +43,12 @@
       "frameworks": {
         "net10.0": {
           "targetAlias": "net10.0",
+          "dependencies": {
+            "MySql.Data": {
+              "target": "Package",
+              "version": "[26.7.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
