@@ -1,4 +1,10 @@
-﻿// See https://aka.ms/new-console-template for more information
-Jogos jogo1 = new Jogos("Mope.io",1, "Navegador", "RPG");
+﻿using System;
+using MySql.Data.MySqlClient;
 
-Console.WriteLine(jogo1);
+string connectionString = "Server=localhost;Database=Games;Uid=root;Pwd=Senac2026;";
+
+using (MySqlConnection conexao = new MySqlConnection(connectionString))
+{
+    conexao.Open();
+    Console.WriteLine("Conectado!");
+}
