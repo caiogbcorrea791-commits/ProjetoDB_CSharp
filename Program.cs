@@ -63,3 +63,39 @@ while (opcao != 6)
         Console.WriteLine("Saindo...");
     }
 }
+
+void Criar()
+{
+    Console.Write("| Digite o ID: ");
+    int id = int.Parse(Console.ReadLine()!);
+
+    Console.Write("| Digite o nome do jogo: ");
+    string nome = Console.ReadLine()!;
+
+    Console.Write("| Digite a plataforma do jogo: ");
+    string plataforma = Console.ReadLine()!;
+
+    Console.Write("| Digite o genero do jogo: ");
+    string genero = Console.ReadLine()!;
+
+    using var conn = new MySqlConnection(connectionString);
+    conn.Open();
+
+    string sql = @"
+        INSERT INTO jogos (id, nome, plataforma, genero)
+        VALUES (@id, @nome, @plataforma, @genero)";
+
+    using var cmd = new MySqlCommand(sql, conn);
+
+    cmd.Parameters.AddWithValue("@id", id);
+    cmd.Parameters.AddWithValue("@nome", nome);
+    cmd.Parameters.AddWithValue("@plataforma", plataforma);
+    cmd.Parameters.AddWithValue("@genero", genero);
+
+    cmd.ExecuteNonQuery();
+
+    Console.WriteLine("| Jogo cadastrado com sucesso!");
+    Console.WriteLine("| Pressione ENTER para continuar...");
+    Console.ReadLine();
+
+}
