@@ -1,4 +1,5 @@
-﻿using System;
+using System;
+using System.Threading;
 using MySql.Data.MySqlClient;
 
 string connectionString = "Server=localhost;Database=Games;Uid=root;Pwd=Senac2026;";
@@ -39,12 +40,11 @@ while (opcao != 6)
 
     if (opcao == 1)
     {
-        Console.WriteLine();
         Cadastrar();
     }
     else if (opcao == 2)
     {
-        Console.WriteLine();
+        Listar();
     }
     else if (opcao == 3)
     {
@@ -60,8 +60,8 @@ while (opcao != 6)
     }
     else if (opcao == 6)
     {
-        Console.WriteLine();
-        Console.WriteLine("Saindo...");
+        Console.WriteLine("|");
+        Console.WriteLine("| Saindo...");
     }
 }
 
@@ -96,14 +96,35 @@ void Cadastrar()
     cmd.ExecuteNonQuery();
 
     Console.WriteLine("| Jogo cadastrado com sucesso!");
-    Console.WriteLine("| Pressione ENTER para continuar...");
-    Console.ReadLine();
+
 
 }
 
+
 void Listar()
 {
-    
+    using var conn = new MySqlConnection(connectionString);
+    conn.Open();
+
+    string sql = "SELECT * FROM jogos";
+
+    using var cmd = new MySqlCommand(sql, conn);
+    using var reader = cmd.ExecuteReader();
+
+    Console.WriteLine("|==================================================");
+    Console.WriteLine("|====================  JOGOS  =====================");
+    Console.WriteLine("|==================================================");
+
+    while (reader.Read())
+    {
+        Console.WriteLine(
+            $"ID: {reader["id"]} | " +
+            $"nome: {reader["nome"]} | " +
+            $"plataforma: {reader["plataforma"]} | " +
+            $"genero do jogo: {reader["genero"]}"
+        );
+    }
+    Thread.Sleep(2000);
 }
 
 void Atualizar()
