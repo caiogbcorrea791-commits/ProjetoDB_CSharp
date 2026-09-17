@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using MySql.Data.MySqlClient;
 
 string connectionString = "Server=localhost;Database=Games;Uid=root;Pwd=Senac2026;";
@@ -40,6 +40,7 @@ while (opcao != 6)
     if (opcao == 1)
     {
         Console.WriteLine();
+        Cadastrar();
     }
     else if (opcao == 2)
     {
@@ -64,7 +65,7 @@ while (opcao != 6)
     }
 }
 
-void Criar()
+void Cadastrar()
 {
     Console.Write("| Digite o ID: ");
     int id = int.Parse(Console.ReadLine()!);
@@ -95,7 +96,5 @@ void Criar()
     cmd.ExecuteNonQuery();
 
     Console.WriteLine("| Jogo cadastrado com sucesso!");
-    Console.WriteLine("| Pressione ENTER para continuar...");
-    Console.ReadLine();
 
 }
