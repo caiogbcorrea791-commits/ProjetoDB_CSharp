@@ -2,23 +2,40 @@
 O C# realiza a conexão com o banco de dados apartir do ADO.NET que é um conjunto de classes do sistema .NET para a comunicação com o 
 banco de dados
 
+
 2 - Qual biblioteca/driver é utilizado pelo banco escolhido?
 A biblioteca/driver utilizada no código é Mysql.Data
 
 
 3 - Como essa biblioteca é adicionada ao projeto?
+Ela pode ser instalada pelo terminal executando o comando "dotnet add package MySql.Data" 
 
 
 4 - O que é uma string de conexão?
-É um texto que passa as informações necessarias para permitir a conexão com o banco de dados
+É um texto que passa as informações necessárias para permitir a conexão com o banco de dados
 
 5 - Quais informações normalmente aparecem em uma string de conexão?
 Aparece o nome do host onde que o banco de dados está rodando, o nome do banco de dados, o nome do login do usuário, a senha do usuário
 
 
 Como realizar INSERT?
+Para fazer um INSERT, usamos o comando INSERT INTO para informar a tabela e as colunas onde os novos dados serão colocados. Depois 
+usamos VALUES para informar os valores que serão adicionados. Depois, no C#, criamos um MySqlCommand para fazer a conexão 
+com o banco. Por último, usamos o ExecuteNonQuery() para executar o comando e adicionar os dados no banco
 
 
 Como realizar SELECT? 
+Para fazer um SELECT, usamos o comando SELECT para escolher os dados que queremos consultar e FROM para informar a tabela. Depois, no C#, criamos 
+um MySqlCommand com o comando SQL e a conexão com o banco. Por último, usamos o ExecuteReader() para executar a consulta e receber os dados encontrados. 
+Depois usamos o Read() para ler cada resultado da consulta
 
 
+Como realizar UPDATE?
+Para fazer um UPDATE, usamos o comando UPDATE para escolher a tabela que queremos mudar. Depois usamos SET para escolher o que queremos mudar e colocar o 
+novo valor. Também usamos WHERE para escolher qual registro será alterado. No C#, criamos um MySqlCommand com o comando SQL e a conexão com o banco. 
+Por último, usamos o ExecuteNonQuery() para executar o comando e fazer a alteração no banco.
+
+Como realizar DELETE?
+Para fazer um DELETE, usamos o comando DELETE para excluir um dado da tabela. Depois usamos FROM para informar de qual tabela vamos excluir e WHERE para 
+escolher qual registro será excluído. No C#, criamos um MySqlCommand com o comando SQL e a conexão com o banco. Por último, usamos o ExecuteNonQuery() 
+para executar o comando e excluir o dado do banco.
