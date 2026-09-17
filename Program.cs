@@ -98,3 +98,18 @@ void Cadastrar()
     Console.WriteLine("| Jogo cadastrado com sucesso!");
 
 }
+
+void Listar()
+{
+    
+}
+
+void Atualizar()
+{
+    
+}
+
+void Deletar()
+{
+    
+}
