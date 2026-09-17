@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using MySql.Data.MySqlClient;
 
 string connectionString = "Server=localhost;Database=Games;Uid=root;Pwd=Senac2026;";
@@ -98,8 +98,6 @@ void Cadastrar()
     Console.WriteLine("| Jogo cadastrado com sucesso!");
     Console.WriteLine("| Pressione ENTER para continuar...");
     Console.ReadLine();
-
-}
 
 }
 
