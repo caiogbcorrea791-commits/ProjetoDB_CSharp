@@ -40,6 +40,7 @@ while (opcao != 6)
     if (opcao == 1)
     {
         Console.WriteLine();
+        Cadastrar();
     }
     else if (opcao == 2)
     {
@@ -64,7 +65,7 @@ while (opcao != 6)
     }
 }
 
-void Criar()
+void Cadastrar()
 {
     Console.Write("| Digite o ID: ");
     int id = int.Parse(Console.ReadLine()!);
