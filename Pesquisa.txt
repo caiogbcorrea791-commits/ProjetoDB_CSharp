@@ -1,3 +1,4 @@
+4.1 Cone
 1 - Como C# realiza uma conexão com um banco de dados?
 O C# realiza a conexão com o banco de dados apartir do ADO.NET que é um conjunto de classes do sistema .NET para a comunicação com o 
 banco de dados
@@ -17,10 +18,11 @@ Ela pode ser instalada pelo terminal executando o comando "dotnet add package My
 5 - Quais informações normalmente aparecem em uma string de conexão?
 Aparece o nome do host onde que o banco de dados está rodando, o nome do banco de dados, o nome do login do usuário, a senha do usuário
 
+4.2 Comandos SQL
 
 Como realizar INSERT?
 Para fazer um INSERT, usamos o comando INSERT INTO para informar a tabela e as colunas onde os novos dados serão colocados. Depois 
-usamos VALUES para informar os valores que serão adicionados. Depois, no C#, criamos um MySqlCommand para fazer a conexão 
+usamos VALUES para informar os valores que serão adicionados. Depois, no C#, criamos um MySqlCommand com o comando SQL e a conexão 
 com o banco. Por último, usamos o ExecuteNonQuery() para executar o comando e adicionar os dados no banco
 
 
@@ -35,7 +37,36 @@ Para fazer um UPDATE, usamos o comando UPDATE para escolher a tabela que queremo
 novo valor. Também usamos WHERE para escolher qual registro será alterado. No C#, criamos um MySqlCommand com o comando SQL e a conexão com o banco. 
 Por último, usamos o ExecuteNonQuery() para executar o comando e fazer a alteração no banco.
 
+
 Como realizar DELETE?
 Para fazer um DELETE, usamos o comando DELETE para excluir um dado da tabela. Depois usamos FROM para informar de qual tabela vamos excluir e WHERE para 
 escolher qual registro será excluído. No C#, criamos um MySqlCommand com o comando SQL e a conexão com o banco. Por último, usamos o ExecuteNonQuery() 
 para executar o comando e excluir o dado do banco.
+
+4.3 Consulta de dados
+
+Como o C# recebe os dados retornados por um SELECT?
+O C# recebe os dados de um SELECT usando o ExecuteReader(). Ele pega os resultados que o banco encontrou e coloca no MySqlDataReader.
+Depois, usamos o Read() para ler os dados que foram encontrados, um por um
+
+
+Como percorrer os resultados de uma consulta?
+Usamos o while junto com o Read(). A cada vez que o Read() é executado, ele vai para o próximo resultado da 
+consulta. Assim, conseguimos ler todos os dados que o banco retornou
+
+
+Como transformar os dados retornados pelo banco em objetos de uma classe?
+Primeiro criamos um objeto da classe e depois colocamos nele as informações do banco. Assim, os dados que estavam do banco ficam dentro do 
+objeto no C#
+
+
+4.4 Segurança
+
+O que são parâmetros em comandos SQL e por que eles são importantes?
+Parâmetros são usados para colocar as informações que queremos no comando SQL. Eles são importantes porque deixam o código mais seguro e 
+evitam alguém coloque um texto malicioso no sistema como o SQL injection
+
+Explique também o que pode acontecer quando um sistema monta comandos SQL diretamente utilizando textos digitados pelo usuário.
+Pode acontecer um problema chamado SQL Injection. Isso acontece quando o que a pessoa digita acaba sendo entendido como parte do comando SQL. Com isso, 
+alguém pode conseguir acessar, alterar ou até apagar dados do banco que não deveria
+
