@@ -209,8 +209,25 @@ public class Jogos
 
     public void Deletar()
     {
-        
+        Console.Write("| digite o ID do jogo que você quer deletar: ");
+        int id = int.Parse(Console.ReadLine()!);
+    
+        using var conn = new MySqlConnection(connectionString);
+        conn.Open();
+    
+        string sql = "DELETE FROM jogos WHERE id = @id";
+    
+        using var cmd = new MySqlCommand(sql, conn);
+        cmd.Parameters.AddWithValue("@id", id);
+    
+        int linhaE = cmd.ExecuteNonQuery();
+    
+        if (linhaE > 0)
+            Console.WriteLine("| jogo excluido");
+        else
+            Console.WriteLine("| jogo não encontrado");
     }
+
 
     public override string ToString()
     {
