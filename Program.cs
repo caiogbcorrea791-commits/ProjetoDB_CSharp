@@ -53,7 +53,7 @@ while (opcao != 6)
     }
     else if (opcao == 4)
     {
-        Console.WriteLine();
+        Atualizar();
     }
     else if (opcao == 5)
     {
@@ -97,7 +97,7 @@ void Cadastrar()
     cmd.ExecuteNonQuery();
 
     Console.WriteLine("| Jogo cadastrado com sucesso!");
-    Thread.Sleep(2000);
+    Thread.Sleep(3000);
 
 }
 
@@ -125,7 +125,7 @@ void Listar()
             $"genero do jogo: {reader["genero"]}"
         );
     }
-    Thread.Sleep(2000);
+    Thread.Sleep(5000);
 }
 
 void Buscar()
@@ -164,7 +164,7 @@ void Buscar()
         Console.WriteLine($"| Gênero: {reader["genero"]}");
 
         Console.WriteLine("|==================================================");
-        Thread.Sleep(2000);
+        Thread.Sleep(5000);
     }
     else
     {
@@ -177,7 +177,52 @@ void Buscar()
 
 void Atualizar()
 {
-    
+    Console.Write("| Digite o ID do jogo: ");
+    if (!int.TryParse(Console.ReadLine(), out int id_jogo))
+    {
+        Console.WriteLine("| Id inválido!");
+        Thread.Sleep(2000);
+        return;
+    }
+
+    Console.Write("| Digite o nome do jogo: ");
+    string novo_nome = Console.ReadLine()!;
+
+    Console.Write("| Digite a plataforma do jogo: ");
+    string nova_plataforma = Console.ReadLine()!;
+
+    Console.Write("| Digite o genero do jogo: ");
+    string novo_genero = Console.ReadLine()!;
+
+
+    using var conn = new MySqlConnection(connectionString);
+    conn.Open();
+
+    string sql = @"
+        UPDATE jogos 
+            SET nome = @novo_nome,
+            plataforma = @nova_plataforma,
+            genero = @novo_genero
+        WHERE id = @id_jogo";
+
+    using var cmd = new MySqlCommand(sql, conn);
+
+    cmd.Parameters.AddWithValue("@id_jogo", id_jogo);
+    cmd.Parameters.AddWithValue("@novo_nome", novo_nome);
+    cmd.Parameters.AddWithValue("@nova_plataforma", nova_plataforma);
+    cmd.Parameters.AddWithValue("@novo_genero", novo_genero);
+
+    int linhas = cmd.ExecuteNonQuery();
+
+    if (linhas > 0)
+    {
+        Console.WriteLine("| Jogo atualizado com sucesso!");
+    }
+    else
+    {
+        Console.WriteLine("| Nenhum jogo com esse Id");
+    }
+    Thread.Sleep(3000);
 }
 
 void Deletar()
