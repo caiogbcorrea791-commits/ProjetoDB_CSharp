@@ -12,6 +12,11 @@ public class Jogos
 
     private string genero;
 
+    public Jogos()
+    {
+        
+    }
+
     public int Id
     {
         get {return id;}
