@@ -57,7 +57,7 @@ while (opcao != 6)
     }
     else if (opcao == 5)
     {
-        Console.WriteLine();
+        Deletar();
     }
     else if (opcao == 6)
     {

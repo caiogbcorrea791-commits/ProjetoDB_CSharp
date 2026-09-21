@@ -1,5 +1,9 @@
+using MySql.Data.MySqlClient;
+
 public class Jogos
 {
+    string connectionString = "Server=localhost;Database=Games;Uid=root;Pwd=Senac2026;";
+
     private int id;
     
     private string nome;
