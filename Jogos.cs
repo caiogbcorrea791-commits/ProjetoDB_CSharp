@@ -59,9 +59,7 @@ public class Jogos
 
     public void Cadastrar()
     {
-        Console.Write("| Digite o ID: ");
-        int id = int.Parse(Console.ReadLine()!);
-
+        
         Console.Write("| Digite o nome do jogo: ");
         string nome = Console.ReadLine()!;
 
@@ -75,12 +73,11 @@ public class Jogos
         conn.Open();
 
         string sql = @"
-            INSERT INTO jogos (id, nome, plataforma, genero)
-            VALUES (@id, @nome, @plataforma, @genero)";
+            INSERT INTO jogos (nome, plataforma, genero)
+            VALUES (@nome, @plataforma, @genero)";
 
         using var cmd = new MySqlCommand(sql, conn);
 
-        cmd.Parameters.AddWithValue("@id", id);
         cmd.Parameters.AddWithValue("@nome", nome);
         cmd.Parameters.AddWithValue("@plataforma", plataforma);
         cmd.Parameters.AddWithValue("@genero", genero);
