@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\caio61412366\\Documents\\GitHub\\ProjetoDB_CSharp\\ProjetoDB_CSharp.csproj": {}
+    "C:\\Users\\vinicios61522996\\Documents\\GitHub\\ProjetoDB_CSharp\\ProjetoDB_CSharp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\caio61412366\\Documents\\GitHub\\ProjetoDB_CSharp\\ProjetoDB_CSharp.csproj": {
+    "C:\\Users\\vinicios61522996\\Documents\\GitHub\\ProjetoDB_CSharp\\ProjetoDB_CSharp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\caio61412366\\Documents\\GitHub\\ProjetoDB_CSharp\\ProjetoDB_CSharp.csproj",
+        "projectUniqueName": "C:\\Users\\vinicios61522996\\Documents\\GitHub\\ProjetoDB_CSharp\\ProjetoDB_CSharp.csproj",
         "projectName": "ProjetoDB_CSharp",
-        "projectPath": "C:\\Users\\caio61412366\\Documents\\GitHub\\ProjetoDB_CSharp\\ProjetoDB_CSharp.csproj",
-        "packagesPath": "C:\\Users\\caio61412366\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\caio61412366\\Documents\\GitHub\\ProjetoDB_CSharp\\obj\\",
+        "projectPath": "C:\\Users\\vinicios61522996\\Documents\\GitHub\\ProjetoDB_CSharp\\ProjetoDB_CSharp.csproj",
+        "packagesPath": "C:\\Users\\vinicios61522996\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\vinicios61522996\\Documents\\GitHub\\ProjetoDB_CSharp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\caio61412366\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\vinicios61522996\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net10.0"

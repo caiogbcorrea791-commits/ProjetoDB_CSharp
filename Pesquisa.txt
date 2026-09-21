@@ -1,11 +1,11 @@
-4.1 Cone
+4.1 Conexão
 1 - Como C# realiza uma conexão com um banco de dados?
 O C# realiza a conexão com o banco de dados apartir do ADO.NET que é um conjunto de classes do sistema .NET para a comunicação com o 
-banco de dados
+banco de dados. No nosso código, usamos a biblioteca MySql.Data para fazer essa conexão com o MySQL.
 
 
 2 - Qual biblioteca/driver é utilizado pelo banco escolhido?
-A biblioteca/driver utilizada no código é Mysql.Data
+A biblioteca/driver utilizada no código é Mysql.Data no nosso código:
 
 
 3 - Como essa biblioteca é adicionada ao projeto?
@@ -16,7 +16,8 @@ Ela pode ser instalada pelo terminal executando o comando "dotnet add package My
 É um texto que passa as informações necessárias para permitir a conexão com o banco de dados
 
 5 - Quais informações normalmente aparecem em uma string de conexão?
-Aparece o nome do host onde que o banco de dados está rodando, o nome do banco de dados, o nome do login do usuário, a senha do usuário
+Aparece o nome do host onde que o banco de dados está rodando, o nome do banco de dados, o nome do login do usuário, a senha do usuário no nosso codigo:
+Server=localhost;Database=Games;Uid=root;Pwd=Senac2026;
 
 4.2 Comandos SQL
 
@@ -56,8 +57,8 @@ consulta. Assim, conseguimos ler todos os dados que o banco retornou
 
 
 Como transformar os dados retornados pelo banco em objetos de uma classe?
-Primeiro criamos um objeto da classe e depois colocamos nele as informações do banco. Assim, os dados que estavam do banco ficam dentro do 
-objeto no C#
+No nosso código, os dados retornados pelo banco são acessados pelo MySqlDataReader usando os nomes das colunas, como reader["id"] e reader["nome"]. 
+Esses dados são usados diretamente para mostrar as informações na tela.
 
 
 4.4 Segurança
