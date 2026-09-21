@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Data.Common;
 using System.Threading;
 using MySql.Data.MySqlClient;
@@ -11,6 +11,8 @@ using (MySqlConnection conexao = new MySqlConnection(connectionString))
     Console.WriteLine("Conectado!");
 }
 
+
+Jogos jogo = new Jogos();
 
 int opcao = 0;
 
@@ -41,23 +43,23 @@ while (opcao != 6)
 
     if (opcao == 1)
     {
-        Cadastrar();
+        jogo.Cadastrar();
     }
     else if (opcao == 2)
     {
-        Listar();
+        jogo.Listar();
     }
     else if (opcao == 3)
     {
-        Buscar();
+        jogo.Buscar();
     }
     else if (opcao == 4)
     {
-        Atualizar();
+        jogo.Atualizar();
     }
     else if (opcao == 5)
     {
-        Deletar();
+        jogo.Deletar();
     }
     else if (opcao == 6)
     {
